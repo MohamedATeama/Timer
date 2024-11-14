@@ -20,8 +20,8 @@ function startCountdown() {
 
 function updateTimer() {
   if (timeRemaining <= 0) {
-    clearInterval(countdown);
     alert("Time's up!");
+    resetCountdown();
     return;
   }
 
@@ -36,10 +36,6 @@ function updateTimer() {
     display.style.color = 'red';
   } else {
     display.style.color = '#333333';
-  }
-
-  if (timeRemaining == 0){
-    resetCountdown();
   }
 }
 
